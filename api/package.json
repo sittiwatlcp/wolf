@@ -26,7 +26,7 @@
     "socket.io-client": "^1.4.8",
     "sqlite3": "^3.1.8",
     "timesync": "^0.3.1",
-    "uws": "^0.14.5",
+    "uws": "^10.148.1",
     "winston": "^2.3.1"
   },
   "devDependencies": {
@@ -34,6 +34,9 @@
     "babel-core": "^6.22.1",
     "babel-eslint": "^7.1.1",
     "babel-loader": "^6.2.10",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-latest": "^6.24.0",
     "babel-preset-stage-0": "^6.22.0",
     "eslint": "^3.15.0",

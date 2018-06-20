@@ -126,13 +126,14 @@ class GameService {
         this.timer(room, data)
         break
       case "$cycle": {
-        if (data && !(["day", "night"].includes(data)))
+        if (data && !(["day", "night"].includes(data))) {
           throw new Error("Invalid Data.")
-
-        const cycle = data || await this.getVar(room, "cycle") !== "day" ? "day" : "night"
-        this.setVar(room, "cycle", cycle)
-        this.update(room, {type: cycle})
-        this.log(`Changing Cycle to ${cycle}.`, room, "verbose")
+        } else {
+          const cycle = data || await this.getVar(room, "cycle") !== "day" ? "day" : "night"
+          this.setVar(room, "cycle", cycle)
+          this.update(room, {type: cycle})
+          this.log(`Changing Cycle to ${cycle}.`, room, "verbose")
+        }
         break
       }
       default:

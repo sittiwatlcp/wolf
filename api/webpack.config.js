@@ -23,7 +23,7 @@ module.exports = {
       options: {
         cacheDirectory: DEBUG,
         babelrc: false,
-        presets: ["latest", "stage-0"]
+        presets: ["stage-0", "stage-1", "stage-2", "stage-3"]
       }
     }]
   },
@@ -33,7 +33,7 @@ module.exports = {
     new webpack.DefinePlugin({__DEV__: process.env.NODE_ENV === "development"}),
 
     new webpack.BannerPlugin({
-      banner: `require("source-map-support").install()`,
+      banner: "require(\"source-map-support\").install()",
       options: {raw: true, entryOnly: false}
     }),
 
